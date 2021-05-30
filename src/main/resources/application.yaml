@@ -1,0 +1,26 @@
+## 解决前端返回的乱码问题 但是目前还没出现
+#spring:
+#    http:
+#      encoding:
+#        force: true
+
+## 更改网页默认的图标 只要在把图标改名为 favorite.ico然后放到public目录下即可
+## 在旧版的springboot中 在WebMvcAutoConfiguration中可以配置
+spring.mvc.favicon.enabled: false
+
+## 使得thymeleaf引擎的缓存功能失效
+spring.thymeleaf.cache: false
+
+## 项目虚拟路径的设置 localhost:8080/xxxx/urlmapping
+server.servlet.context-path: /03manage_sys_sb
+## 国际化配置文件组路径设置 设置成i18n文件夹下的login配置组(绑定配置文件组)
+spring.messages.basename: i18n.login
+
+# 设置Spring的全局时间格式, 因此时间格式转换器只要把时间格式全转换成这种形式就可以了
+spring:
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+#spring:
+#  jackson:
+#    date-format: yyyy-MM-dd
+#    time-zone: GMT+8
